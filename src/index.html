@@ -1,45 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>MDB Webpack Starter</title>
-    <!-- Favicon -->
-    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
-    <!-- Font Awesome -->
+    <meta http-equiv="X-UA-compatible" content="ie=edge" />
+    <title>Lista zakupów</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <!-- Google Fonts Roboto -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-    />
-    <!-- Main css file -->
     <link rel="stylesheet" href="css/index.min.css" />
-    <!-- Custom styles -->
-    <style></style>
   </head>
 
   <body>
-    <!-- Start your project here-->
-    <div class="container">
-      <div class="d-flex justify-content-center align-items-center" style="height: 100vh">
-        <div class="text-center">
-          <img
-            src="https://mdbootstrap.com/img/logo/mdb-transparent-250px.png"
-            style="width: 250px; height: 90px;"
-          />
-          <h5 class="pt-3">Thank you for using our product. We're glad you're with us.</h5>
-          <p class="pb-5">MDB Team</p>
+   <header class="head__container">
+     <div class="app__header">
+       <h1>Zorganizuj zakupy</h1>
+     </div>
+   </header>
+
+   <nav class="nav__container">
+      <div class="app__menu__item">
+        <button id='toggleViewBtn'>Lista</button>
+       </div>
+       <div class="app__menu__item">
+        <button id="toggleAddBtn">Dodaj produkt</button>
+      </div>
+   </nav>
+
+    <div class="add__container" id="add__container">
+      <div class="product__content">
+        <div class="product__new">
+          <span>Dodaj nowy produkt</span>
+          <div class="product__type">
+            <span><label for="product__type">Rodzaj produktu</label></span>
+            <select name=product__types" id="product__types" >
+              <option value="vegetables">Warzywa</option>
+              <option value="fruits">Owoce</option>
+              <option value="diary">Nabiał</option>
+              <option value="bread">Pieczywo</option>
+              <option value="hygiene">Artykuły higieniczne</option>
+            </select>
+          </div>
+          <div class="product__name">
+            <span><label for="product__name">Nazwa produktu</label></span>
+            <input id="product__name" type="text" placeholder="" required>
+          </div>
+          <div class="product__quantity">
+            <span><label for="product__quantity">Ilość</label></span>
+            <input id="product__quantity" type="number" required>
+            <span><label for="quantity__type" id="quantity__type">jednostka</label></span>
+          </div>
+          <div class="product__add__button" id="product__add__button"><button>Dodaj</button></div>
         </div>
       </div>
     </div>
-    <!-- End your project here-->
 
+
+    <div class="list__container" id="list__container">
+      <div class="list__content">
+        <ul id="product__list">
+        </ul>
+        <div id='lista'>
+          <li></li>
+      </div>
+    </div>
+
+    <div className="counter">
+      <p id="count__number"></p>
+    </div>
+
+
+
+
+    
   </body>
-  <!-- Main js file -->
-  <script type="text/javascript" src="js/index.min.js"></script>
-  <!-- Custom scripts -->
-  <script type="text/javascript"></script>
 
+  <script type="text/javascript" src="js/index.min.js"></script>
+ 
 </html>
