@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-compatible" content="ie=edge" />
+    <title>Lista zakupów</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/index.min.css" />
+  </head>
+
+  <body>
+   <header class="head__container">
+     <div class="app__header">
+       <h1>Zorganizuj zakupy</h1>
+     </div>
+   </header>
+
+   <nav class="nav__container">
+      <div class="app__menu__item">
+        <button id='toggleViewBtn'>Lista</button>
+       </div>
+       <div class="app__menu__item">
+        <button id="toggleAddBtn">Dodaj produkt</button>
+      </div>
+   </nav>
+
+    <div class="add__container" id="add__container">
+      <div class="product__content">
+        <div class="product__new">
+          <span>Dodaj nowy produkt</span>
+          <div class="product__type">
+            <span><label for="product__type">Rodzaj produktu</label></span>
+            <select name=product__types" id="product__types" >
+              <option value="vegetables">Warzywa</option>
+              <option value="fruits">Owoce</option>
+              <option value="diary">Nabiał</option>
+              <option value="bread">Pieczywo</option>
+              <option value="hygiene">Artykuły higieniczne</option>
+            </select>
+          </div>
+          <div class="product__name">
+            <span><label for="product__name">Nazwa produktu</label></span>
+            <input id="product__name" type="text" placeholder="" required>
+          </div>
+          <div class="product__quantity">
+            <span><label for="product__quantity">Ilość</label></span>
+            <input id="product__quantity" type="number" required>
+            <span><label for="quantity__type" id="quantity__type">jednostka</label></span>
+          </div>
+          <div class="product__add__button" id="product__add__button"><button>Dodaj</button></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="list__container" id="list__container">
+      <div class="list__content">
+        <ul id="product__list">
+        </ul>
+        <div id='lista'>
+          <li></li>
+      </div>
+    </div>
+
+    <div className="counter">
+      <p id="count__number"></p>
+    </div>
+
+
+
+
+    
+  </body>
+
+  <script type="text/javascript" src="js/index.min.js"></script>
+ 
+</html>
