@@ -1,0 +1,13 @@
+$main: #E3E3E3;
+$alternative: #F6F6F8;
+$focuse: #C60021;
+$buttons: #ecc9bc;
+
+@mixin breakpoint($point) {
+    @if $point == desktop {
+      @media (min-width: 70em) { @content ; }
+   }
+   @else if $point == mobileonly {
+      @media (max-width: 37em)  { @content ; }
+   }
+ }

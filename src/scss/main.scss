@@ -1,0 +1,78 @@
+@import 'variables.scss';
+
+body {
+    background-color: $alternative;
+}
+
+.add__container {
+    display: none;
+}
+
+.product__new { 
+    border: 1px solid black;
+    display: block;
+}
+
+.list__container {
+    display: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul li {
+    display: block;
+    font-size: 24px;
+    color: $focuse;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+    width: 300px;
+    cursor: pointer;
+    position: relative;
+    text-align: left;
+}
+
+.close {
+    position: absolute;
+    color: $focuse;
+    right: 12px;
+    top: 20px;   
+}
+
+#vegetables__list,
+#fruits__list,
+#diary__list,
+#bread__list,
+#hygiene__list {
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+}
+#lista {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+#vegetables__list {
+    background-image: url("https://cdn1.iconfinder.com/data/icons/yum-yum-cons/512/food-15-512.png");
+}
+
+#fruits__list {
+    background-image: url("https://img.icons8.com/color/452/group-of-fruits.png");
+}
+
+#diary__list {
+    background-image: url("https://previews.123rf.com/images/bsd555/bsd5551706/bsd555170600444/80933876-dairy-products-flat-design-long-shadow-icon-yogurt-bottle-and-glass-of-milk-eggs-and-cheese-grocery-.jpg");
+}
+
+#bread__list {
+    background-image: url("https://png.pngtree.com/png-vector/20190215/ourlarge/pngtree-vector-bread-icon-png-image_537876.jpg");
+}
+
+#hygiene__list {
+    background-image: url("https://previews.123rf.com/images/bestvectorelements/bestvectorelements1710/bestvectorelements171000871/87441293-illustration-of-cleaning-symbol-on-hygiene-icon-.jpg");
+}

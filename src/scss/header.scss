@@ -1,0 +1,30 @@
+.head__container {
+    position: relative;
+    height: 150px;
+    background-image: linear-gradient($main, #ff6126);
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+    margin: 0 auto;
+    width: 0%;
+
+    h1 {
+        margin: 0;
+        padding: 70px 0;
+        font: 24px "Arial";
+        text-align: center;
+    }
+
+    header h1 {
+        color :white;
+    }
+
+  
+    @include breakpoint(desktop) {
+        width: 30%;
+    }
+
+    @include breakpoint(mobileonly) {
+        width: 60%;
+    }
+
+}
